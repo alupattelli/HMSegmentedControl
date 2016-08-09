@@ -193,6 +193,13 @@ typedef enum {
 @property (nonatomic, readwrite) CGFloat selectionIndicatorHeight;
 
 /**
+ Aggiunta ANDREA LUPATTELLI
+ *  verticalDividerHeight
+ Default is 1.0
+*/
+@property (nonatomic, readwrite) CGFloat verticalDividerHeight;
+
+/**
  Edge insets for the selection indicator.
  NOTE: This does not affect the bounding box of HMSegmentedControlSelectionStyleBox
  
@@ -222,7 +229,7 @@ typedef enum {
 - (id)initWithSectionTitles:(NSArray *)sectiontitles;
 - (id)initWithSectionImages:(NSArray *)sectionImages sectionSelectedImages:(NSArray *)sectionSelectedImages;
 - (instancetype)initWithSectionImages:(NSArray *)sectionImages sectionSelectedImages:(NSArray *)sectionSelectedImages titlesForSections:(NSArray *)sectiontitles;
-- (void)setSelectedSegmentIndex:(NSUInteger)index animated:(BOOL)animated;
+- (void)setSelectedSegmentIndex:(NSInteger)index animated:(BOOL)animated;
 - (void)setIndexChangeBlock:(IndexChangeBlock)indexChangeBlock;
 - (void)setTitleFormatter:(HMTitleFormatterBlock)titleFormatter;
 
